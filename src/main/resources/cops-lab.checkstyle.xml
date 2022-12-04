@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN" "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<!-- For details about the different rules, see https://checkstyle.sourceforge.io/config.html -->
+
+<module name="Checker">
+    <property name="charset" value="UTF-8" />
+
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true" />
+    </module>
+
+    <module name="RegexpSingleline">
+        <property name="format" value="(?&lt;!\*)\s+$|\*\s\s+$" />
+        <property name="message" value="Line has trailing whitespace." />
+    </module>
+
+    <module name="RegexpMultiline">
+        <property name="format" value="(?m)\n\n\n" />
+        <property name="message" value="File has (at least) two consecutive empty lines." />
+    </module>
+
+    <module name="RegexpMultiline">
+        <property name="fileExtensions" value="java" />
+        <property name="format" value="System\s*\.\s*(out|err)\s*\.\s*print(ln)?\s*\(" />
+        <property name="message" value="No use of System.(out|err).print" />
+    </module>
+
+    <!-- files must start with copyright header -->
+    <module name="Header">
+        <property name="fileExtensions" value="java" />
+        <property name="header" value="/*\n" />
+    </module>
+    <module name="Header">
+        <property name="fileExtensions" value="java" />
+        <property name="ignoreLines" value="{1,2}" />
+        <property name="header" value="/*\n * Copyright 1234 XXX\n *\n * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *    http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */" />
+    </module>
+
+    <module name="TreeWalker">
+
+        <!-- imports -->
+        <module name="AvoidStarImport" />
+        <module name="RedundantImport" />
+        <module name="UnusedImports">
+            <property name="processJavadoc" value="true" />
+        </module>
+
+        <!-- modifiers -->
+        <module name="ModifierOrder" />
+        <module name="RedundantModifier" />
+
+        <!-- blocks -->
+        <module name="LeftCurly" />
+        <module name="RightCurly" />
+        <module name="EmptyCatchBlock" />
+        <module name="NeedBraces" />
+
+        <!-- coding -->
+        <module name="EmptyStatement" />
+        <module name="EqualsHashCode" />
+        <module name="IllegalInstantiation" />
+        <module name="OneStatementPerLine" />
+        <module name="PackageDeclaration" />
+        <module name="RequireThis" />
+        <module name="SimplifyBooleanExpression" />
+        <module name="SimplifyBooleanReturn" />
+        <module name="UnnecessarySemicolonAfterTypeMemberDeclaration" />
+
+        <!-- misc -->
+        <module name="UpperEll" />
+        <module name="ArrayTypeStyle" />
+        <module name="UncommentedMain">
+            <property name="excludedClasses" value="\.Main$" />
+        </module>
+
+        <!-- metrics -->
+        <module name="CyclomaticComplexity" />
+
+        <!-- whitespace -->
+        <module name="EmptyLineSeparator">
+            <!-- tokens must be non-empty or it falls back to default -->
+            <property name="tokens" value="CLASS_DEF" />
+            <property name="allowMultipleEmptyLines" value="false" />
+        </module>
+    </module>
+</module>
