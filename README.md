@@ -35,7 +35,7 @@ These options are illustrated in the following snippet.
                     <dependency>
                         <groupId>dev.c0ps</groupId>
                         <artifactId>checkstyle-config</artifactId>
-                        <version>0.0.1-SNAPSHOT</version>
+                        <version>0.0.1</version>
                     </dependency>
                 </dependencies>
                 <configuration>
