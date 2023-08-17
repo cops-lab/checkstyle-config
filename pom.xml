@@ -3,12 +3,12 @@
 
     <groupId>dev.c0ps</groupId>
     <artifactId>checkstyle-config</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- automatically set through: mvn versions:set -DupdateBuildOutputTimestampPolicy=always -DnewVersion=... -->
-        <project.build.outputTimestamp>2023-08-15T22:59:19Z</project.build.outputTimestamp>
+        <project.build.outputTimestamp>2023-08-17T20:56:16Z</project.build.outputTimestamp>
     </properties>
 
     <distributionManagement>
