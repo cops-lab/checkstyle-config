@@ -29,7 +29,7 @@ These options are illustrated in the following snippet.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.3.0</version>
                 <!-- (3) add a dependency to the package registry -->
                 <dependencies>
                     <dependency>
